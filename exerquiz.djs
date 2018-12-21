@@ -1,9 +1,18 @@
 \begingroup\efdlspecials
 \isdljstrue
 \makeatletter
-\obeyspaces\obeylines\let^^M=\jsR%
-\catcode`\"=12%
-\gdef\dljsexerquiziii{%
+\immediate\openout\js@verbatim@out=\js@Path exerquiz.fdf
+\begin{jsexpverbatimwrite}
+\firstFDFline
+1 0 obj
+<< /FDF << /JavaScript << /Doc 2 0 R >> >> >>
+endobj
+2 0 obj
+[ \csname\@gobble exerquizOBJ\endcsname]
+endobj
+3 0 obj
+<<>>
+stream
 var _thereisdjs=true;
 /*
         Document Level JavaScript
@@ -13,8 +22,11 @@ var _thereisdjs=true;
 var exerquizLoaded = true;
 this.disclosed = true;
 app.runtimeHighlight=false;
-}%
-\gdef\dljsexerquiziv{%
+endstream
+endobj
+4 0 obj
+<<>>
+stream
 var ok2Continue = true;
 var ProcessIt = true;
 var retn;
@@ -85,8 +97,11 @@ var aGroup = new Array
       ["[","]",\eqBrackets],
       ["{","}",\eqBraces]
     );
-}%
-\gdef\dljsexerquizv{%
+endstream
+endobj
+5 0 obj
+<<>>
+stream
 var _mto;
 function eqAppAlert(args) {
     _ModalNotOn = false;
@@ -602,8 +617,11 @@ function requireFormNot(UserAns, regexpr) {
         else return true;
     }
 }
-}%
-\gdef\dljsexerquizvi{%
+endstream
+endobj
+6 0 obj
+<<>>
+stream
 if (!String.prototype.trim) {
   String.prototype.trim = function () {
     return this.replace(/^[\s\string\\uFEFF\string\\xA0]+|%
@@ -668,8 +686,11 @@ function RespBoxAppr(e){
   }
   return value;
 }
-}%
-\gdef\dljsexerquizvii{%
+endstream
+endobj
+7 0 obj
+<<>>
+stream
 function ProcRespTxt() {
     var i, success, authorAnswer, userAnswer = event.value;
     var fieldname=event.target.name;
@@ -737,8 +758,11 @@ function eqFilter(filterMethod) {
             return this.toString();
     }
 }
-}%
-\gdef\dljsexerquizviii{%
+endstream
+endobj
+8 0 obj
+<<>>
+stream
 function InitMsg(msg) { return (\eqInitQuizMsg) }
 function syntaxError() { eqAppAlert(\eqSyntaxErrorUndefVar,3); }
 var lstOfQuizzes=new Object();
@@ -1235,8 +1259,11 @@ function clearAllSubQuizzes() {
     }
     isAQuizUnfinished.check=true;
 }
-}%
-\gdef\dljsexerquizix{%
+endstream
+endobj
+9 0 obj
+<<>>
+stream
 function ProcessMultiSelection(key,letterresp,probno,%
 quizno,qtfield,pts,ppts) {
     var f = this.getField("mck."+qtfield+"."+probno);
@@ -1297,8 +1324,11 @@ function LimitSelection(n,fname,k) {
         return false
     } else return true;
 }
-}%
-\gdef\dljsexerquizx{%
+endstream
+endobj
+10 0 obj
+<<>>
+stream
 function chooseJSColor( b, c1, c2 ) {
     return ( b ) ? c1 : c2;
 }
@@ -1431,8 +1461,11 @@ function highThreshold(nQuestions)
         eqAppAlert(\highThresholdMsg,3);
     return (cnt >= nQuestions);
 }
-}%
-\gdef\dljsexerquizxi{%
+endstream
+endobj
+11 0 obj
+<<>>
+stream
 function groupEval(doc,qtfield,probno,aKey,aWeights)
 {
     var totalGrpPts = aWeights[0];
@@ -1462,29 +1495,10 @@ function groupBernoulliEval(doc,qtfield,probno,aKey,aWeights)
         isCorrect *= (aKey[i] != undefined) ? (Number(aKey[i])) : 0;
     return (isCorrect*totalGrpPts);
 }
-}%
+endstream
+endobj
+trailer
+<< /Root 1 0 R >>
+\lastFDFline
+*end{jsexpverbatimwrite}
 \endgroup
-\begingroup 
-\catcode`\<=12 
-\catcode`\>=12 
-\ccpdftex%
-\input{dljscc.def}%
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquiziii) >> }
-\xdef\objexerquiziii{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquiziv) >> }
-\xdef\objexerquiziv{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizv) >> }
-\xdef\objexerquizv{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizvi) >> }
-\xdef\objexerquizvi{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizvii) >> }
-\xdef\objexerquizvii{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizviii) >> }
-\xdef\objexerquizviii{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizix) >> }
-\xdef\objexerquizix{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizx) >> }
-\xdef\objexerquizx{\the\pdflastobj\space0 R}
-\immediate\pdfobj{ << /S/JavaScript/JS(\dljsexerquizxi) >> }
-\xdef\objexerquizxi{\the\pdflastobj\space0 R}
-\endgroup 
