@@ -6,10 +6,11 @@
 *.blg
 *.brf
 *.dpth
+*.djs
 *.dvi
 *.eps
+*.fdf
 *.gz
-*.html
 *.idv
 *.idx
 *.ilg
