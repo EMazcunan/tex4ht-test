@@ -16,7 +16,6 @@
 *.ilg
 *.ind
 *.jax
-*.jpg
 *.lg
 *.log
 *.md5
@@ -24,10 +23,8 @@
 *.oc
 *.out
 *.pdf
-*.png
 *.ps
 *.sage-chat
-*.svg
 *.synctex.gz
 *.tmp
 *.toc
@@ -35,4 +32,3 @@
 *.ids
 *.sage*
 Config.sty
-*~
