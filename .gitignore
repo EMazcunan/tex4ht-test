@@ -5,6 +5,7 @@
 *.bbl
 *.blg
 *.brf
+%*.cut
 *.dpth
 *.djs
 *.dvi
@@ -24,6 +25,7 @@
 *.out
 *.pdf
 *.ps
+%*.qsl
 *.sage-chat
 *.synctex.gz
 *.tmp

@@ -1,18 +1,50 @@
+% HTML:
+% htlatex tex4ht-final.tex "tex4ht-config" " -cunihtf -utf8"
+%
+% Para subir a GitHub duplicar  tex4ht-final.html y renombrarlo a index.html 
+
 \documentclass[12pt,a4paper,twoside]{article}
+
 
 \usepackage[utf8]{inputenx}
 \usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
+
+\usepackage{ifpdf}
+
+
+%\usepackage[shorthands=off]{babeltools}
+%\babelshorthand{:}
+%\ifpdf
+%	\usepackage[spanish]{babel} % conflicto con hyperref con tex4ht
+%\else
+%\fi
+
+
+\usepackage{parskip}
+\usepackage{microtype}
 
 \usepackage{amsmath}
-\usepackage{ifpdf}
+
 \ifpdf
-\usepackage{graphicx}
+	\usepackage{graphicx}
 \else
-\usepackage[dvipdfmx]{graphicx}
+	\usepackage[dvipdfmx]{graphicx}
 \fi
 
+
 \usepackage{lipsum}
+
+%\ifpdf
+%\usepackage{hyperref}
+%\hypersetup{colorlinks,linkcolor=green}
+%\else
+%\usepackage[colorlinks, dvips]{hyperref}
+%\fi
+%\usepackage{exerquiz}
+%\usepackage[dvips]{exerquiz}
+%\usepackage[dvips,colorlinks]{hyperref}
+\RequirePackage{url}
+\usepackage{lnhyperref}
 
 
 
@@ -23,9 +55,17 @@
 
 \maketitle
 
-%\tableofcontents
+\ifdefined\HCode
+\else
+	\tableofcontents
+\fi
+
+
 
 \section{Matemáticas}
+
+\label{sec:math}
+
 Veamos cómo se visualizan en el navegador:
 
 \begin{itemize}
@@ -38,7 +78,14 @@ Veamos cómo se visualizan en el navegador:
 
 \section{Fuentes}
 
-Escritura en \textbf{\bfseries negrita}, \textit{\itshape itálica} y \textsf{\sffamily sans serif}.
+Comandos: Escritura en \textbf{\bfseries negrita}, \textit{\itshape itálica} y \textsf{\sffamily sans serif}.
+
+
+Declaraciones: Escritura en {\bfseries negrita}, {\itshape itálica} y {\sffamily sans serif}.
+
+Entornos: Escritura en \begin{bfseries}negrita\end{bfseries}, \begin{itshape} itálica \end{itshape} y  \begin{sffamily} sans serif \end{sffamily}.
+
+Frase larga, para comprobar si se parte bien estupendamente  estupendamente  estupendamente. Frase larga, para comprobar si se parte bien estupendamente. Frase larga, para comprobar si se parte bien. Frase larga, para comprobar si se parte bien. Frase larga, para comprobar si se parte bien.
 
 \section{Imágenes}
 
@@ -54,8 +101,32 @@ Escritura en \textbf{\bfseries negrita}, \textit{\itshape itálica} y \textsf{\s
 \noindent\rule[10pt]{4cm}{3mm}\\
 \noindent\includegraphics[width=4cm]{images/GWLeibniz.png}
 
+\section{Hyperref}
 
+En la sección \ref{sec:math} 
+Visitar \href{https://edx.org}{pagina de EdX}
+Visitar \href{https://edx.org}{pagina de EdX bla bla bla bla bla bla bla bla bla bla bla}
 
+\section{exerquiz}
+%
+%
+%\begin{shortquiz} % begin shortquiz environment
+%Which of the following is the $\dfrac{d}{dx}{\sin(x^3)}$?
+%\begin{answers}{4} % 4 columns of answers
+%\Ans0 $\sin(3x^2)$ & % \Ans0 is a false answer
+%\Ans0 $\cos(x^3)$ &
+%\Ans1 $3x^2\cos(x^3)$ & % \Ans1 is the correct answer
+%\Ans0 $3xˆ2\cos(3x^2)$
+%\end{answers} % end answers environment
+%\end{shortquiz} % end shortquiz environment
+%
+%
+%\begin{shortquiz*}[KublaKhan1]
+%Was it in Xanadu did Kubla Kahn a stately pleasure dome decree?
+%\begin{answers}{4}
+%\Ans1 True  & \Ans0 False
+%\end{answers}
+%\end{shortquiz*}
 
 \section{Sección de relleno}
 
@@ -73,7 +144,7 @@ Escritura en \textbf{\bfseries negrita}, \textit{\itshape itálica} y \textsf{\s
 
 \lipsum[1-15]		
 
-\section{Una última sección de relleno}
+\section{Una última sección de relleno con el título muy largo muy largo muy largo}
 
 \lipsum[1-15]
 
