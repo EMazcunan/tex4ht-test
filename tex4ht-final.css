@@ -111,6 +111,14 @@ div.float img {text-align:center;}
 div.figure img {text-align:center;}
 .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
 .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+span.textbf { font-weight: bold; }
+span.textit { font-style: italic; }
+span.textrm { font-family: serif; }
+span.textsc { font-variant: small-caps; }
+span.textsf { font-family: sans-serif; }
+span.texttt { font-family: monospace; }
+span.emph { font-style: italic;}
+span.emph span.emph {font-style: normal;}
 .equation td{text-align:center; vertical-align:middle; }
 td.eq-no{ width:5%; }
 table.equation { width:100%; } 
@@ -122,6 +130,7 @@ math .textit { font-style: italic; }
 math .textsl { font-style: oblique; }
 math .textsf { font-family: sans-serif; }
 math .textbf { font-weight: bold; }
+table.tabular{border-collapse: collapse; border-spacing: 0;}
 mo.MathClass-op + mi{margin-left:0.3em}
 mi + mo.MathClass-op{margin-left:0.3em}
  math mi[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
@@ -164,7 +173,7 @@ mi + mo.qopname{margin-left:0.3em}
 a{color:green;text-decoration: none;}
 a:visited{color:green;}
 a:hover{color:#888;}
- body { margin: auto; width: 80%; font-size:1.5em; max-width: 40em; text-align: justify; text-justify: inter-word; hyphens:auto; } 
+ body { margin: auto; width: 80%; font-size:150%; max-width: 32em; text-align: justify; text-justify: inter-word; hyphens:auto; } 
  body#tex4ht-menu{ background:#F5F5F5; font-size:1em; white-space: normal; } 
 /* end css.sty */
 

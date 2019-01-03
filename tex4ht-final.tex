@@ -18,7 +18,7 @@
 %	\usepackage[spanish]{babel} % conflicto con hyperref con tex4ht
 %\else
 %\fi
-
+%\usepackage{lnspbabel}
 
 \usepackage{parskip}
 \usepackage{microtype}
@@ -89,17 +89,44 @@ Frase larga, para comprobar si se parte bien estupendamente  estupendamente  est
 
 \section{Imágenes}
 
-\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+Sin escala:
+
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+\noindent\includegraphics{images/bird.jpg}\\
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+\noindent\includegraphics{images/GWLeibniz.png}
+
+Escaladas a la mitad:
+
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+\noindent\includegraphics[scale=0.5]{images/bird.jpg}\\
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+\noindent\includegraphics[scale=0.5]{images/GWLeibniz.png}
+
+Anchura $40\%$ texto ($40\%$ de \the\dimexpr\textwidth\relax = \the\dimexpr .4\textwidth\relax):
+
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
 \noindent\includegraphics[width=.4\textwidth]{images/bird.jpg}\\
-\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
 \noindent\includegraphics[width=.4\textwidth]{images/GWLeibniz.png}
 
+
+%Anchura $40\%$ línea:
+%
+%\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+%\noindent\includegraphics[width=.4\linewidth]{images/bird.jpg}\\
+%\noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
+%\noindent\includegraphics[width=.4\linewidth]{images/GWLeibniz.png}
+
+
+Anchura 156pt:
+
 \noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
-\noindent\rule[2mm]{4cm}{3mm}\\
-\noindent\includegraphics[width=4cm]{images/bird.jpg}\\
+\noindent\rule[2mm]{156pt}{3mm}\\
+\noindent\includegraphics[width=156pt]{images/bird.jpg}\\
 \noindent Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\\
-\noindent\rule[10pt]{4cm}{3mm}\\
-\noindent\includegraphics[width=4cm]{images/GWLeibniz.png}
+\noindent\rule[1em]{156pt}{1em}\\
+\noindent\includegraphics[width=156pt]{images/GWLeibniz.png}
 
 \section{Hyperref}
 
